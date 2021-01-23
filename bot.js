@@ -12,7 +12,7 @@ const bot = new Telegraf("1473534811:AAGJoD2Vdp6aCTwz2PklMEQn-Qx-G2VspIk")
 // Set the bot response
 bot.on('text', ({ replyWithHTML}) => replyWithHTML('<b>Hello</b>'))
 
-bot.telegram.setWebhook('https://runtest-13025.nodechef.com/secret-path')
+bot.telegram.setWebhook(process.env.URL)
 
 
 app.get('/', (req, res) => res.send('Hello World!'))
