@@ -8,7 +8,7 @@ const PORT = process.env.PORT || '8080'
 
 
 
-const bot = new Telegraf("1473534811:AAGJoD2Vdp6aCTwz2PklMEQn-Qx-G2VspIk")
+const bot = new Telegraf(process.env.BOT_TOKEN)
 // Set the bot response
 bot.on('text', ({ replyWithHTML}) => replyWithHTML('<b>Hello</b>'))
 
