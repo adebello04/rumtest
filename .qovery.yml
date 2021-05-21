@@ -1,0 +1,11 @@
+---
+application:
+  name: "rumtest"
+  project: "Test"
+  organization: "QoveryCommunity"
+routers:
+- name: "main-rumtest"
+  routes:
+  - application_name: "rumtest"
+    paths:
+    - "/*"
