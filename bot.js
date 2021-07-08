@@ -1,9 +1,10 @@
 const { Bot, webhookCallback} = require('grammy');
 const express = require('express')
 const app = express()
+const bot = new Bot();
 app.use(express.json());
 app.use(webhookCallback(bot));
-const bot = new Bot();
+
 
 
 const PORT = process.env.PORT || '3000'
