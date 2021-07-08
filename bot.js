@@ -4,7 +4,7 @@ const app = express()
 const token = 
 const bot = new Bot(token, {
   options: {
-    apiRoot: 'http://167.71.21.239:8081'
+    apiRoot: 'http://167.71.21.239:5000'
   }
 })
 app.use(express.json());
@@ -12,7 +12,7 @@ app.use(webhookCallback(bot));
 
 
 
-const PORT = process.env.PORT || '3000'
+const port = process.env.PORT || '3000'
 
 bot.command('start', async(ctx)=>{
 await ctx.reply('am alive oh yh')
