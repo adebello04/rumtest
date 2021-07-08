@@ -1,7 +1,12 @@
 const { Bot, webhookCallback} = require('grammy');
 const express = require('express')
 const app = express()
-const bot = new Bot();
+const token = 
+const bot = new Bot(token, {
+  options: {
+    apiRoot: 'http://167.71.21.239:8081'
+  }
+})
 app.use(express.json());
 app.use(webhookCallback(bot));
 
